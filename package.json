@@ -1,0 +1,11 @@
+{
+  "name": "facial_recognition",
+  "version": "1.0.0",
+  "description": "Full Tutorial posted - https://www.tomshardware.com/how-to/raspberry-pi-facial-recognition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
