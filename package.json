@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "Full Tutorial posted - https://www.tomshardware.com/how-to/raspberry-pi-facial-recognition",
   "main": "index.js",
-  "start":"node index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
-}
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "mongoose": "^8.6.2"
+  }
