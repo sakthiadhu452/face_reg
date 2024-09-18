@@ -97,6 +97,31 @@ app.post('/set-false', async (req, res) => {
     }
   });
   
+// Route to set the personfound field to false
+app.post('/set-true', async (req, res) => {
+  try {
+    // Search for a person (this example updates the first document it finds)
+    const person = await Person.findOne();
+
+    if (!person) {
+      return res.status(404).json({ message: 'Person not found' });
+    }
+
+    // Set personfound to false
+    person.personfound = true;
+
+    // Save the updated person document
+    await person.save();
+
+    res.json({
+      message: 'Personfound set to true',
+      updatedPerson: person,
+    });
+  } catch (error) {
+    // Return a 500 error response if something goes wrong
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
 
 
 // Start the server
